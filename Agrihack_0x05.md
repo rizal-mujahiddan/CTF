@@ -61,3 +61,4 @@ website : `http://52.187.65.2:16007/`
 ada kluenya yaitu `Mr.Robot : "Beep...Beep..Beepp"` maka saya mencari di google mengenai robot di website [ini](https://www.robotstxt.org/robotstxt.html) maka saya aplikasi website `http://52.187.65.2:16001/` dengan menambahkan `robots.txt`
 ketemulah flagnya <br/>
 
+
