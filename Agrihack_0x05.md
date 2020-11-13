@@ -53,12 +53,43 @@ dengan foto seperti <br/> <br/>
 ![](foto/matrix.jpg)
  <br/> <br/>
 maka dengan menyamakan konsep dari soal sebelumnya dari Talking maka akan menjadi seperti [ini](doc/matrix.txt) <br/>
+`flag : agrihack{C0lumn4t_Tr4nsp051t1000N}`
+<br/>
 [sumber_file](https://drive.google.com/drive/folders/1UskrfztjMhYbpp7c3ZEYMTfNMpHh0ori?usp=sharing)
 ### 8. BabyAES : Introduction
-
+dikarenakan ada bacaannya enkripsi 3x maka yang pertama adalah dengan dekripsi seperti _cyber jawara seperti enc.txt di babyxor_ maka saya lakukan hexdump dan mendapatkan ciphernya<br/><br/>
+![](foto/introAES_hexdump.png)
+<br/><br/>
+![](foto/introAES_cipher.png)
+<br/><br/>
+kemudian saya melihat terlebih dahulu sourcenya dan ketemulah kuncinya buat AES
+<br/><br/>
+![](foto/introAES_source.png)
+<br/><br/>
+dan saya olah dengan [tools ini](https://www.devglan.com/online-tools/aes-encryption-decryption) 
+<br/><br/>
+![](foto/introAES_AES_64.png)
+<br/><br/>
+dikarenakan menghasilkan ciri ciri base64 dan saya konvertkan menjadi ascii dan hasilnya adalah ...
+<br/><br/>
+![](foto/introAES_64_hasil.png)
+<br/><br/>
+flagnya adalah `agrihack{51mpl3_ECB_MODE_34b6a5}`
+[source.py](https://agrihack.codepwnda.id/uploads?key=1e137ba830987af7dd616a5761de8910f2bcc4fc7c0ab1242b51943f91954263%2Fsource.py)[enc.txt](https://agrihack.codepwnda.id/uploads?key=4ac3ed117c61d638505b36882a34a034ff596e4bff50fef3db5549db1f382e4b%2Fenc.txt)
 ### 9. Password Cracker 2
+sama seperti Password Cracker dengan menggunakan [tools ini](https://crackstation.net/) dan kita crack `535fc078a3a273070809bfdbef6018bf`
+<br/><br/>
+![](foto/crack2_hash.png)
+<br/><br/>
+![](foto/crack2_ter.png)
+<br/><br/>
+dan hasilnya adalah
+flag : `agrihack{d0n7_u53_w34k__p455w000000RD}`
+
 ### 10. crypto/BabyXor Vol.2
+
 ### 11. Password Cracker 3
+
 ## Web
 ### 1. Inception
 Dengan membuka website ini dan kita langsung saja *menginspect* websitenya dikarenakan adanya foto ini. (ingat kalau di chrome tekan `F12`)<br/><br/><br/>
