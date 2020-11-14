@@ -81,14 +81,40 @@ sama seperti Password Cracker dengan menggunakan [tools ini](https://crackstatio
 <br/><br/>
 ![](foto/crack2_hash.png)
 <br/><br/>
+dan masukkan saja ke terminal `nc 52.187.65.2 15002`
+<br/><br/>
 ![](foto/crack2_ter.png)
 <br/><br/>
 dan hasilnya adalah
 flag : `agrihack{d0n7_u53_w34k__p455w000000RD}`
 
 ### 10. crypto/BabyXor Vol.2
+dengan materi yang dikirim dari channel CSI IPB youtube tentang [xor cipher repeated](https://www.youtube.com/watch?v=-elQW05sgV8) dengan tools [xortool](https://github.com/hellman/XORTOOL) <br/>
+
+berikut ini adalah walkthroughnya
+<br/><br/>
+![](foto/xortool_2.png)
+<br/><br/>
+![](foto/xortool_2_csv.png)
+<br/><br/>
+kita cek masing masing hasilnya yang berbentuk _*txt*_ ya . bukan yang berbentuk bin
+<br/><br/>
+![](foto/xortool_2_hasil.png)
+<br/><br/>
+maka ketemulah flag : `agrihack{common_character__is_space}`<br/><br/>
+[sumber file](https://agrihack.codepwnda.id/uploads?key=f037303d30444fff4a69c6c23bbef4fae687ed793c827e24e63d1fada339b077%2Fenkrip.enc)
 
 ### 11. Password Cracker 3
+hash : `29f1f8b054a15638a1a269a0f4b0d743`<br/>
+salted : `secret_`<br/>
+dengan [tools ini](https://www.dcode.fr/md5-hash) saya bisa mendekripsi hash tersebut 
+<br/><br/>
+![](foto/crack3_salt.png)
+<br/><br/>
+![](foto/crack3_ter.png)
+<br/><br/>
+flag : `agrihack{R0ck_y0u_1s_4_th1ng55____b33f}`<br/>
+dengan netcat `nc 52.187.65.2 15003`
 
 ## Web
 ### 1. Inception
@@ -113,7 +139,13 @@ flag : `agrihack{x-header_header_tersembunyi_LINZ_IS_HERE}`<br/>
 website : `http://52.187.65.2:16007/`
 
 ### 3. Bipbip
-ada kluenya yaitu `Mr.Robot : "Beep...Beep..Beepp"` maka saya mencari di google mengenai robot di website [ini](https://www.robotstxt.org/robotstxt.html) maka saya aplikasi website `http://52.187.65.2:16001/` dengan menambahkan `robots.txt`
-ketemulah flagnya <br/>
+ada kluenya yaitu `Mr.Robot : "Beep...Beep..Beepp"` maka saya mencari di google mengenai robot di website [ini](https://www.robotstxt.org/robotstxt.html) maka saya aplikasi website `http://52.187.65.2:16001/` dengan menambahkan `robots.txt` menjadi `http://52.187.65.2:16001/robots.txt` dengan hasil <br/>
+<br/><br/>
+![](foto/bipbip_robot.png)
+<br/><br/>
+dan kemudian dengan directorynya yakni `/linz-is-here` maka saya buka website `http://52.187.65.2:16001/linz-is-here` <br/><br/>
+![](foto/bipbip_flag.png)<br/><br/>
+flagnya `agrihack{robootssssssss_a_little_information_linz_is_here}`
 
-
+### 4. Chef
+Dengan 
