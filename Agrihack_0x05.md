@@ -148,4 +148,24 @@ dan kemudian dengan directorynya yakni `/linz-is-here` maka saya buka website `h
 flagnya `agrihack{robootssssssss_a_little_information_linz_is_here}`
 
 ### 4. Chef
-Dengan 
+Dengan menginspect dan melihat cookienya maka kita bisa melihat ada cookie ,
+<br/><br/>
+![](foto/chef_juna.png)
+<br/><br/>
+![](foto/chef_admin.png)
+<br/><br/>
+jadinya bisa diganti cookienya dari `user = juna` menjadi `user = admin` dan ,<br/>,<br/>
+jadilah seperti ini 
+<br/><br/>
+![](foto/chef_hasil.png)
+<br/><br/>
+maka jadilah flag : `agrihack{chef_cookie_cook_xdxdxd_LINZ_IS_HERE}`
+<br/><br/>
+[sumber website](http://52.187.65.2:16003/)
+
+### 5. Kingsman
+pertama saya cek dahulu dengan `http://52.187.65.2/robots.txt` 
+<br/><br/>
+
+<br/><br/>
+kemudian saya men
