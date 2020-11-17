@@ -116,9 +116,8 @@ dengan [tools ini](https://www.dcode.fr/md5-hash) saya bisa mendekripsi hash ter
 flag : `agrihack{R0ck_y0u_1s_4_th1ng55____b33f}`<br/>
 dengan netcat `nc 52.187.65.2 15003`
 
-## Misc
-### 1. Bintang Jago
-### 2. Mesin Hitung
+## Misc 
+### 1. Mesin Hitung
 kita lihat dulu bagaimana pola pada netcat itu sendiri <br/><br/>
 ![](foto/mesin_hitung_pola.png)
 <br/><br/>
@@ -173,6 +172,13 @@ print(penjawab)
 
 maka saya ketemu flagnya yakni : `agrihack{tambah_kali_bagi_kurang_bb7b3d}`
 sumber netcat :`nc 52.187.65.2 15009`
+
+### 2. Bintang Jago
+kita langsung saja dengan pengaplikasian <br/><br/>
+![](foto/bintang.png)
+<br/><br/>
+flag :`agrihack{import_bintang_PWN_56ba5fc}`
+sumber netcat : `nc 52.187.65.2 15008`
 
 ## Web
 ### 1. Inception
@@ -238,6 +244,10 @@ dapatlah flagnya yakni : `agrihack{ur_now_our_agent0x05_linz_is_here}`
 ### 6. Redirect
 Saya mencari cari writeup yang lain , kemudian saya menemukan _writeup_ [__improper redirect__](http://2101704584farras.blog.binusian.org/2019/06/20/http-improper-redirect/) maka saya saya akan men-_curl_-kan dengan command `curl` maka hasilnya adalah 
 <br/><br/> 
-
+![](foto/redirect.png)
 <br/><br/> 
+flag : `agrihack{R3d1reCt_N0__r3dIrEcT!ng___x999699}`
 <br/>[sumber website](http://52.187.65.2:16004)
+
+### 7. LSI
+dengan menggunakan menonton Youtoube kesayangan Kita yakni [CSI IPB mengenai LFI](https://www.youtube.com/watch?v=h-2UrETGKFg&t=646s)
