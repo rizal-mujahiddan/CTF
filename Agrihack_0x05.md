@@ -236,5 +236,8 @@ dapatlah flagnya yakni : `agrihack{ur_now_our_agent0x05_linz_is_here}`
 [sumber website](http://52.187.65.2:16002)
 
 ### 6. Redirect
-[sumber website](http://52.187.65.2:16004)
-Saya mencari cari writeup yang lain , kemudian saya menemukan _writeup_ [__improper redirect__]
+Saya mencari cari writeup yang lain , kemudian saya menemukan _writeup_ [__improper redirect__](http://2101704584farras.blog.binusian.org/2019/06/20/http-improper-redirect/) maka saya saya akan men-_curl_-kan dengan command `curl` maka hasilnya adalah 
+<br/><br/> 
+
+<br/><br/> 
+<br/>[sumber website](http://52.187.65.2:16004)
