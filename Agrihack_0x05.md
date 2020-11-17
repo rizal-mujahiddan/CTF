@@ -116,6 +116,64 @@ dengan [tools ini](https://www.dcode.fr/md5-hash) saya bisa mendekripsi hash ter
 flag : `agrihack{R0ck_y0u_1s_4_th1ng55____b33f}`<br/>
 dengan netcat `nc 52.187.65.2 15003`
 
+## Misc
+### 1. Bintang Jago
+### 2. Mesin Hitung
+kita lihat dulu bagaimana pola pada netcat itu sendiri <br/><br/>
+![](foto/mesin_hitung_pola.png)
+<br/><br/>
+kemudian dengan bantuan script dari [website CSI IPB](https://www.youtube.com/watch?v=9y1Akw_JBIg&t=2023s) maka saya membuat code seperti ini <br/><br/>
+![](foto/mesin_hitung_script.py)
+<br/><br/>
+```
+from pwn import *    
+def penjawab(persa):   
+	if(persa.find(' + ')!=-1):   
+		patokan = persa.find(' + ')    
+		kiri = int(persa[0:patokan],10)   
+		kanan= int(persa[patokan+3:],10)  
+		hasil = str(kiri+kanan)  
+		return hasil 
+	if(persa.find(' - ')!=-1):   
+		patokan = persa.find(' - ')    
+		kiri = int(persa[0:patokan],10)   
+		kanan= int(persa[patokan+3:],10)  
+		hasil = str(kiri-kanan)  
+		return hasil  
+	if(persa.find(' * ')!=-1):   
+		patokan = persa.find(' * ')    
+		kiri = int(persa[0:patokan],10)   
+		kanan= int(persa[patokan+3:],10)  
+		hasil = str(kiri*kanan)  
+		return hasil  
+	if(persa.find(' / ')!=-1):   
+		patokan = persa.find(' / ')    
+		kiri = int(persa[0:patokan],10)   
+		kanan= int(persa[patokan+3:],10)   
+		hasil = str(kiri//kanan)  
+		return hasil   
+    
+p = remote('52.187.65.2',15009)   
+p.recvuntil('hehe\n')   
+persamaan = str(p.recvline(),'utf-8')    
+answer = penjawab(persamaan)   
+p.recvuntil('Jawaban : ')   
+p.sendline(answer)  
+   
+for i in range(999):  
+	p.recvuntil('BENAR\n')    
+	persamaan = str(p.recvline(),'utf-8')     
+	answer = penjawab(persamaan)    
+	p.recvuntil('Jawaban : ')    
+	p.sendline(answer)   
+	
+penjawab = p.recv()  
+print(penjawab) 
+```
+
+maka saya ketemu flagnya yakni : `agrihack{tambah_kali_bagi_kurang_bb7b3d}`
+sumber netcat :`nc 52.187.65.2 15009`
+
 ## Web
 ### 1. Inception
 Dengan membuka website ini dan kita langsung saja *menginspect* websitenya dikarenakan adanya foto ini. (ingat kalau di chrome tekan `F12`)<br/><br/><br/>
@@ -164,8 +222,19 @@ maka jadilah flag : `agrihack{chef_cookie_cook_xdxdxd_LINZ_IS_HERE}`
 [sumber website](http://52.187.65.2:16003/)
 
 ### 5. Kingsman
-pertama saya cek dahulu dengan `http://52.187.65.2/robots.txt` 
+pertama saya cek dahulu dengan `http://52.187.65.2:16002/robots.txt` dan ketemulah User-Agent yang lain dengan `Kingsman Agent 0x05`  dan kita akan membuka `/agent-exam` dengan user-agent tersebut 
 <br/><br/>
+![](foto/Kingsman_robot.png)
+<br/><br/>
+kemudian saya hasil nya seperti ini
+<br/><br/>
+![](foto/Kingman_flag.png)
+<br/><br/>
+[cara menganti user agent](https://winpoin.com/cara-mengganti-user-agent-di-google-chrome-tanpa-add-on/)<br/><br/>
+dapatlah flagnya yakni : `agrihack{ur_now_our_agent0x05_linz_is_here}`
+<br/>
+[sumber website](http://52.187.65.2:16002)
 
-<br/><br/>
-kemudian saya men
+### 6. Redirect
+[sumber website](http://52.187.65.2:16004)
+Saya mencari cari writeup yang lain , kemudian saya menemukan _writeup_ [__improper redirect__]
