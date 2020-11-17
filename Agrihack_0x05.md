@@ -1,9 +1,28 @@
 # Agrihack 0x05
 
-Agrihack merupakan Ajang untuk penyeleksian menjadi anggota CSI(Cyber Security IPB). CSI merupakan komunitas yang berada di ilmu komputer yang prestise di ilmu komputer IPB
+Agrihack merupakan Ajang untuk penyeleksian menjadi anggota CSI(Cyber Security IPB). CSI merupakan komunitas yang berada di ilmu komputer yang berprestise di ilmu komputer IPB
+
+## Binary 
+### 1. Flow1
+dengan melihat urutan stacknya yang bersebelahan, <br/><br/>
+![](foto/flow1_c.png)<br/><br/>
+kita timpa saja yah melebihi si __buffernya__ 
+<br/><br/>![](foto/flow1_nc.png)<br/><br/>
+flag : `agrihack{Toooooooooo_much_character_is_dangerous_LINZ_IS_HERE}
+`<br/><br/> [sumber file](https://ipb.link/flow1)<br/>netcat : `nc 52.187.65.2 17001` 
+
+## 2. Flow2
+![](foto/flow2_c.png)
+<br/><br/>dengan melihat ```modified == 0x04170417``` 
+
+maka kita bisa memodifikasi dengan setelah ``` 64*'A' (buffer) + '\x17\x04\x17\x04'(modified)``` maka terjadilah seperti
+
+
+
+
+
 
 ## Crpytography
-
 ### 1. Base64
 [file](https://drive.google.com/drive/folders/1WUNUQX8EpcEXnz9HMS59zdoqlzx1rM65?usp=sharing) ini dengan isinya `YWdyaWhhY2t7YmFzaWNfdG9fa25vd19iYXNlNjR9`. DIkarenakan judulnya itu base64 maka bisa kita di dekripsi dengan [tools](http://rumkin.com/tools/cipher/base64.php) ini maka hasilnya
 ![](foto/base64.png)
@@ -250,4 +269,65 @@ flag : `agrihack{R3d1reCt_N0__r3dIrEcT!ng___x999699}`
 <br/>[sumber website](http://52.187.65.2:16004)
 
 ### 7. LSI
-dengan menggunakan menonton Youtoube kesayangan Kita yakni [CSI IPB mengenai LFI](https://www.youtube.com/watch?v=h-2UrETGKFg&t=646s)
+dengan menggunakan menonton Youtube kesayangan Kita yakni [CSI IPB mengenai LFI](https://www.youtube.com/watch?v=h-2UrETGKFg&t=563s) dan kemudian saya ikuti dan mengganti untuk mencari flag karena _*flagnya berbentuk file flag.php*_<br/><br/>
+![](foto/LSI_64.png)
+<br/><br/>
+yah tinggal di deksripsi saja yah base 64
+<br/><br/>
+![](foto/LSI_flag.png)
+<br/><br/>
+flagnya adalah `agrihack{OOPSIEEE!!!_Ketauandehfilerahasianya_LINZ_IS_HERE}`
+<br/>
+[sumber website](http://52.187.65.2:16005)
+
+### 8. LSI2
+
+dengan menggunakan menonton Youtube kesayangan Kita yakni [CSI IPB mengenai LFI](https://www.youtube.com/watch?v=h-2UrETGKFg&t=1138s) dan kemudian saya ikuti dan mengganti untuk mencari flag karena _*flagnya berbentuk file flag.php*_<br/><br/>
+![](foto/LSI2_etcpass.png)
+<br/><br/>
+dan tinggal kita susuri aja dengan `home/sercretfilehere/flag.php`
+<br/><br/>
+![](foto/LSI_flag.png)
+<br/><br/>
+flagnya adalah `agrihack{LSI_GALI_TERUS_SAMPAI_DALAM_LINZ_IS_HERE}`
+<br/>
+[sumber website](http://52.187.65.2:16006)
+
+### 9. Admin 
+maafkan saya , saya hanya mengerti ini dengan menggunakan tools [__sqlmap__](http://sqlmap.org/). dan saya menerapkannya melalui [link ini](https://medium.com/sadulur/mengambil-database-di-web-melalui-sql-map-di-kali-linux-56f65b639f4a) dan hasilnya seperti ini ya <br/><br/>
+![](foto/admin_dbs.png)
+<br/><br/>
+untuk mendapatkan table,jangan lupa menuliskan `--forms` dikarenakan querynya berbentuk __form__ dan __action-nya POST__ 
+![](foto/admin_dbs_get.png)
+<br/><br/>
+setelah mendapatkan database, tinggal kita kunjungi saja
+<br/><br/>
+![](foto/admin_database.png)
+<br/><br/>
+![](foto/admin_database_get.png)
+<br/><br/>
+setelah mendapatkan tablenya , tinggal kita `dump`
+<br/><br/>
+![](foto/admin_table_dump.png)
+<br/><br/>
+![](foto/admin_table_dump_get.png)
+<br/><br/>
+dan tinggal kita masukkan saja akun admin dikarenakan sudah ada password ke websitenya
+dan ketemulah flagnya
+<br/><br/>
+[](foto/admin_flag.png)
+<br/><br/>flagnya : `agrihack{ez_SeQueL_Inj3kxx1on_}`
+[sumber website](http://52.187.65.2:16009)
+
+### 10. Data Breach
+sama dengan yang diatas ini tinggal pake sqlmap coba,latihan dulu sebelum melihat kunci jawabannnya
+<details>
+<summary>Jawabannya adalah</summary>
+<br/><br/>ini commandnya : <b>sqlmap -u http://52.187.65.2:16010/ --forms --dbs -D databreach -T secret -dump </b><br/><br/>
+<img src="foto/databreach_command.png">
+<br/><br/>
+<img src="foto/databreach_flag.png">
+<br/><br/>
+flag : <b>agrihack{SQLi_lead_to_data_breach_and_it_is_very_DANGER!!!!!_LINZ_IS_HERE}</b>
+</details>
+[sumber website](http://52.187.65.2:16010/)
