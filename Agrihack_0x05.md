@@ -11,15 +11,32 @@ kita timpa saja yah melebihi si __buffernya__
 flag : `agrihack{Toooooooooo_much_character_is_dangerous_LINZ_IS_HERE}
 `<br/><br/> [sumber file](https://ipb.link/flow1)<br/>netcat : `nc 52.187.65.2 17001` 
 
-## 2. Flow2
+### 2. Flow2
 ![](foto/flow2_c.png)
 <br/><br/>dengan melihat ```modified == 0x04170417``` 
-
 maka kita bisa memodifikasi dengan setelah ``` 64*'A' (buffer) + '\x17\x04\x17\x04'(modified)``` maka terjadilah seperti
+<br/><br/>
+![](foto/flow2_nc.png)
+<br/><br/>
+flag : `agrihack{U_CAN_CONTROL_THE_VALUE_NOW!!!_LINZ_IS_HERE}` <br/><br/> [sumber file](https://ipb.link/flow2) <br/>netcat : `nc 52.187.65.2 17002` 
 
+### 3. Flow3
+![](foto/flow3_c.png)
+<br/><br/>dengan melihat fungsi ```int linz_here(){
+  printf("%s\n", flag);
+}``` 
+maka kita mencari alamat dari linz_here(). Sebelum itu kita meng-_compile_ terlebih dahulu <br/><br/> ![](foto/flow3_compile.png)<br/><br/>
+kemudian kita __debugging__ dengan menggunakan dengan [gdb peda](https://github.com/longld/peda)
+<br/><br/> ![](foto/flow3_gdb.png)<br/><br/>
+dengan melihat dan memahami dari [overwrite return address](https://www.youtube.com/watch?v=Oyw_i8L3t8c) maka payloadnya adalah<br/><br/> ![](foto/flow3_nc.png)<br/><br/>
+flag : `agrihack{jump_to_anywhere_with_overflow_LINZ_IS_HERE}` <br/><br/> [sumber file](https://ipb.link/flow3) <br/>netcat : `nc 52.187.65.2 17003` 
 
-
-
+### 4. String1
+dengan menggunakan writeup dari [sini](https://tcode2k16.github.io/blog/posts/picoctf-2018-writeup/binary-exploitation/#problem-6) maka saya langsung aplikasikan di ipython3<br/><br/>![](string1_script.png)<br/><br/>![](string1_flag.png)<br/><br/>
+flag : `agrihack{u_can_leak_some_information_from_format_string_attack_LINZ_IS_HERE}`
+<br/><br/>
+[file c](https://agrihack.codepwnda.id/uploads?key=3fcbba194ca222fede26a344c175a4abbe5d6d467405e41aa46b373335c444e6%2Ffmt.c)
+[file ELF](https://agrihack.codepwnda.id/uploads?key=6265761bee9c4f4d0227f68918c51f2f8af3e6fb6bfd0260e6ab7e4f9b5d787a%2Fchall)
 
 
 ## Crpytography
