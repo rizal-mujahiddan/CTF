@@ -252,13 +252,68 @@ dan jadilah ketemulah flag <br/>
 flag : `agrihack{whoaaa_u_find_me}`<br/>
 [filenya](doc/baby-c-0x01)
 
-## 3. c-0x00
+## 3. C-0x00
 langsung saja kita analisis dengan command file dan kita langsung lihat saja ke IDA PRO
 <br/><br/>
 ![](foto/c-0x00_ida.png)
 <br/><br/>
+disitu kita lihat bahwa inputan kita dibagi 2 ```if ( 2 * s[v4] != *((_DWORD *)&arr + v4) )``` dan batasan inputan kita adalah 20 dari ```if ( strlen(s) != 20 )```<br/>
+kemudian dikarenakan diminta dari alamatnya dari __arr__ maka saya akan men-__debug__ dengan gdb dan hasilnya adalah seperti ini
+<br/><br/>
+![](foto/c-0x00_peda.png)
+<br/><br/>
+dan kita code dengan membagi 2 dan menjadikan character
+<br/><br/>
+![](foto/c-0x00_code.png)
+<br/><br/>
+dan kita masukkan kedalam ELF-nya dan jadilah seperti ini
+<br/><br/>
+![](foto/c-0x00_flag.png)
+<br/><br/>
+flag : `agrihack{welcome_to_reversing}`<br/>
+[filenya](doc/c-0x00)
 
+## 4. python-0x00
+pertama kita decompile terlebih dahulu `pyc -> py` dengan menggunakan [uncompyle6](https://pypi.org/project/uncompyle6/) 
+br/><br/>
+![](foto/python-0x00_decompile.png)
+<br/><br/>
+dan kemudian kita analisis code agar inputannya menghasilkan flag
+<br/><br/>
+![](foto/python-c-0x00_analysis.png)
+<br/><br/>
+dan langsung dapatkan lah flagnya
+<br/><br/>
+![](foto/python-c-0x00_flag.png)
+<br/><br/>
+flag : `agrihack{dec0mpile_pyc_bytc0de_9adj3}`<br/>
+[file](doc/py-0x00.pyc)
 
+## 5. C-0x01
+pertama yang tentu saja kita analisis data dengan command __file__<br/>
+kemudian kita lihat saja di IDA PRO dan langsung saja kita analysis dan perhatikan kalimat yang diapit tanda `""" `<br/>
+disitu ada arr1 dan arr2<br/>
+arr1 itu buat __ganjil__<br/>
+arr2 itu buat __genap__
+<br/><br/>
+![](foto/c-0x01_analysis.png)
+<br/><br/>
+kemudian kita cari __alamat dari arr1 dan arr2__ dari bantuan gdb peda 
+<br/><br/>
+![](foto/c-0x01_peda.png)
+<br/><br/>
+dan langsung saja kita compile dan run untuk menghasilkan string tersebut
+<br/><br/>
+![](foto/c-0x01_script.png)
+<br/><br/>
+dan kemudian langsung kita temukan flagnya dari [file tersebut](doc/c-0x01)
+<br/><br/>
+![](foto/c-0x01_flag.png)
+<br/><br/>
+ketemu flag : `agrihack{nic3_analysis_k0walsk1}`
+<br/>[sumber file](doc/c-0x01)
+
+## 6. 
 
 ## Web
 ### 1. Inception
