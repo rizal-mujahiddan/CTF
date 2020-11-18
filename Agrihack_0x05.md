@@ -216,6 +216,47 @@ kita langsung saja dengan pengaplikasian <br/><br/>
 flag :`agrihack{import_bintang_PWN_56ba5fc}`
 sumber netcat : `nc 52.187.65.2 15008`
 
+## Reverse
+### 1. Baby-C-0x00
+pertama kita analisis dulu datanya itu ELF 32 bit / 64 bit 
+<br/><br/>
+![](foto/baby-0x00_file.png)
+<br/><br/>
+dengan menggunakan IDA PRO 64 bit maka langsung ketemu jawabannya
+<br/><br/>
+![](foto/baby-0x00_IDA.png)
+<br/><br/>
+maka akan ketemu flagnya <br/>
+flag : `agrihack{yeah_this_is_easier_than_C_0x??_series}`<br/>
+[filenya](https://agrihack.codepwnda.id/uploads?key=9022906aba13af92bae0c80489ecbd2b3f8b5a12154e89ab8c222099ece4fdc3%2Fbaby-c-0x00)
+atau [file](doc/baby-c-0x00)
+
+### 2. Baby-C-0x01
+kita analisis filenya 32 bit atau 64 bit 
+<br/><br/>
+![](foto/baby-0x01_file.png)
+<br/><br/>
+kemudian kita disassembly dengan IDA PRO dan copy di text editor
+<br/><br/>
+![](foto/baby-0x01_copy.png)
+<br/><br/>
+dan lihatlah ada istilah [rbp-30h] dikarenakan selisihnya hanya 1 . maka kita menyimpulakan s, v5-v19 adalah tipe data __char__ -> maka sebenarnya s adalah __array of char__ 
+<br/><br/>
+![](foto/baby-0x01_pointer.png)
+<br/><br/>
+kemudian kita masukkan nilainya dan menghindari percabangan agar command __exit__ tidak dilakukan 
+<br/><br/>
+![](foto/baby-0x01_flag.png)
+<br/><br/>
+dan jadilah ketemulah flag <br/>
+flag : `agrihack{whoaaa_u_find_me}`<br/>
+[filenya](doc/baby-c-0x01)
+
+## 3. C-0x00
+
+
+
+
 ## Web
 ### 1. Inception
 Dengan membuka website ini dan kita langsung saja *menginspect* websitenya dikarenakan adanya foto ini. (ingat kalau di chrome tekan `F12`)<br/><br/><br/>
