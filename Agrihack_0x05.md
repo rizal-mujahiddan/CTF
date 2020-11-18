@@ -252,8 +252,11 @@ dan jadilah ketemulah flag <br/>
 flag : `agrihack{whoaaa_u_find_me}`<br/>
 [filenya](doc/baby-c-0x01)
 
-## 3. C-0x00
-
+## 3. c-0x00
+langsung saja kita analisis dengan command file dan kita langsung lihat saja ke IDA PRO
+<br/><br/>
+![](foto/c-0x00_ida.png)
+<br/><br/>
 
 
 
