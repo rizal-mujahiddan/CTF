@@ -252,7 +252,7 @@ dan jadilah ketemulah flag <br/>
 flag : `agrihack{whoaaa_u_find_me}`<br/>
 [filenya](doc/baby-c-0x01)
 
-## 3. C-0x00
+### 3. C-0x00
 langsung saja kita analisis dengan command file dan kita langsung lihat saja ke IDA PRO
 <br/><br/>
 ![](foto/c-0x00_ida.png)
@@ -273,7 +273,7 @@ dan kita masukkan kedalam ELF-nya dan jadilah seperti ini
 flag : `agrihack{welcome_to_reversing}`<br/>
 [filenya](doc/c-0x00)
 
-## 4. python-0x00
+### 4. python-0x00
 pertama kita decompile terlebih dahulu `pyc -> py` dengan menggunakan [uncompyle6](https://pypi.org/project/uncompyle6/) 
 br/><br/>
 ![](foto/python-0x00_decompile.png)
@@ -289,7 +289,7 @@ dan langsung dapatkan lah flagnya
 flag : `agrihack{dec0mpile_pyc_bytc0de_9adj3}`<br/>
 [file](doc/py-0x00.pyc)
 
-## 5. C-0x01
+### 5. C-0x01
 pertama yang tentu saja kita analisis data dengan command __file__<br/>
 kemudian kita lihat saja di IDA PRO dan langsung saja kita analysis dan perhatikan kalimat yang diapit tanda `""" `<br/>
 disitu ada arr1 dan arr2<br/>
@@ -313,7 +313,48 @@ dan kemudian langsung kita temukan flagnya dari [file tersebut](doc/c-0x01)
 ketemu flag : `agrihack{nic3_analysis_k0walsk1}`
 <br/>[sumber file](doc/c-0x01)
 
-## 6. 
+### 6. C-0x02
+seperti biasa tinggal kita `file`__-kan__ dan langsung saja kita ke IDA PRO 
+<br/><br/>
+![](foto/c-0x02_ida.png)
+<br/><br/>
+dan langsung saja di analisis  ```if ( s[0] * v4 != 9559 || s[0] > v4 )``` 
+<br/><br/>
+![](foto/c-0x02_analysis.png)
+<br/><br/>
+disitukan bahwa ``` printf("key: ");__isoc99_scanf("%d", &v4);``` berarti bahwa v4 adalah key. dan kita mencari keynya terlebih dahulu<br/>
+<br/><br/>
+![](foto/c-0x02_key.png)
+<br/><br/>
+dan kemudian kita cari __&arr --- &arr+23__ dengan menggunakan peda
+<br/><br/>
+![](foto/c-0x02_peda.png)
+<br/><br/>
+dan akhirnya kita olah dengan __pwntools__ maka  dan kita olah dari alamat &arr
+<br/><br/>
+![](foto/c-0x02_flag.png)
+<br/><br/>
+maka flag:`agrihack{camellia:"makasih_udah_bukain_komputer_aku<3"}`<br/>
+sumber netcat : `nc 52.187.65.2 17010` [sumber file](doc/c-0x02)
+
+### 7. C-0x03
+langsung saja ke IDA PRO yah. dan kemudian yang mencurigakan ada fungsi ``` print_flag()```
+<br/><br/>
+![](foto/c-0x03_cek_fungsi.png)
+<br/><br/>
+kemudian kita copy dan kita gunakan python untuk mendapatakan flag dan kita wrap ke format `agrihack{}`<br/>
+<br/><br/>
+![](foto/c-0x03_printflag().png)
+<br/><br/>
+![](foto/c-0x03_flag.png)
+<br/><br/>
+dan ketemulah flag : `agrihack{weh_kok_ngecheat__}`
+<br/>
+[sumber file](doc/c-0x03)
+
+### 8. C-0x04
+
+
 
 ## Web
 ### 1. Inception
