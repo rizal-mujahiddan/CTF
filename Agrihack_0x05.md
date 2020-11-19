@@ -353,7 +353,15 @@ dan ketemulah flag : `agrihack{weh_kok_ngecheat__}`
 [sumber file](doc/c-0x03)
 
 ### 8. C-0x04
+Dengan menggunakan IDA PRO dan menganalisis dari fungsi itu sendiri . maka hasilnya adalah [sebagai berikut](doc/analisis C-0x04.txt) 
+<br/><br/>
+![](foto/c-0x04_flag.png)
+<br/><br/>
+flag : `agrihack{check1_check2_check3_check4_mah_lewat}`<br/>
+sumber netcat: `nc 52.187.65.2 17009`<br/>
+[sumber file](doc/c-0x04)
 
+### 9. C-0x05
 
 
 ## Web
@@ -488,4 +496,3 @@ sama dengan yang diatas ini tinggal pake sqlmap coba,latihan dulu sebelum meliha
 flag : <b>agrihack{SQLi_lead_to_data_breach_and_it_is_very_DANGER!!!!!_LINZ_IS_HERE}</b>
 </details>
 [sumber website](http://52.187.65.2:16010/)
-a
