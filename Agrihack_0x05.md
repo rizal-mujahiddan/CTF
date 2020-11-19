@@ -488,3 +488,4 @@ sama dengan yang diatas ini tinggal pake sqlmap coba,latihan dulu sebelum meliha
 flag : <b>agrihack{SQLi_lead_to_data_breach_and_it_is_very_DANGER!!!!!_LINZ_IS_HERE}</b>
 </details>
 [sumber website](http://52.187.65.2:16010/)
+a
