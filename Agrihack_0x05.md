@@ -32,11 +32,58 @@ dengan melihat dan memahami dari [overwrite return address](https://www.youtube.
 flag : `agrihack{jump_to_anywhere_with_overflow_LINZ_IS_HERE}` <br/><br/> [sumber file](https://ipb.link/flow3) <br/>netcat : `nc 52.187.65.2 17003` 
 
 ### 4. String1
-dengan menggunakan writeup dari [sini](https://tcode2k16.github.io/blog/posts/picoctf-2018-writeup/binary-exploitation/#problem-6) maka saya langsung aplikasikan di ipython3<br/><br/>![](foto/string1_script.png)<br/><br/>![](foto/string1_flag.png)<br/><br/>
-flag : `agrihack{u_can_leak_some_information_from_format_string_attack_LINZ_IS_HERE}`
+dengan menggunakan writeup dari [sini](https://tcode2k16.github.io/blog/posts/picoctf-2018-writeup/binary-exploitation/#problem-6) maka saya langsung aplikasikan di ipython3
 <br/><br/>
+![](foto/string1_script.png)
+<br/><br/>
+![](foto/string1_flag.png)
+<br/><br/>
+flag : `agrihack{u_can_leak_some_information_from_format_string_attack_LINZ_IS_HERE}`
+<br/>
 [file c](https://agrihack.codepwnda.id/uploads?key=3fcbba194ca222fede26a344c175a4abbe5d6d467405e41aa46b373335c444e6%2Ffmt.c)
 [file ELF](https://agrihack.codepwnda.id/uploads?key=6265761bee9c4f4d0227f68918c51f2f8af3e6fb6bfd0260e6ab7e4f9b5d787a%2Fchall)
+
+
+## Forensic
+### 1. Wheres Waldo?
+dengan melihat _String_ yang miring. maka dipastikan dengan menggunakan command __strings__ maka hasilnya adalah 
+<br/><br/>
+![](foto/waldo_flag.png)
+<br/><br/>
+flag : `agrihack{oh_h3r3_15_w4LDoo__776c64}`<br/>
+[sumber file](doc/wheres_waldo.png)
+
+## 2.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Crpytography
@@ -362,6 +409,25 @@ sumber netcat: `nc 52.187.65.2 17009`<br/>
 [sumber file](doc/c-0x04)
 
 ### 9. C-0x05
+kita mencoba coba terlebih dahulu [file c-0x05](doc/c-0x05) dan menjadilah seperti ini
+<br/><br/>
+![](foto/c-0x05_coba.png)
+<br/><br/>
+Kemudian kita lihat di IDA Pro , melihat codingannya
+<br/><br/>
+![](foto/c-0x05_coba.png)
+<br/><br/>
+dan kemudian kita mencoba membuat encoding dari bahasa C ke Python agar lebih mudah
+<br/><br/>
+![](foto/c-0x05_percobaan.png)
+<br/><br/>
+dan langsunglah membuat decoding dan juga langsung men-__decoding__ dengan inputan dari [secret.smile](doc/secret.smile)
+<br/><br/>
+![](foto/c-0x05_percobaan.png)
+<br/><br/>
+[file smile](doc/secret.smile) <br/>
+[file c-0x05](doc/c-0x05)
+
 
 
 ## Web
