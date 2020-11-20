@@ -53,7 +53,23 @@ dengan melihat _String_ yang miring. maka dipastikan dengan menggunakan command 
 flag : `agrihack{oh_h3r3_15_w4LDoo__776c64}`<br/>
 [sumber file](doc/wheres_waldo.png)
 
-## 2.
+### 2. Side-by-side
+tinggal kita cek di binwalk dan ekstrak deh
+<br/><br/>
+![](foto/side-by-side_flag.png)
+<br/><br/>
+flag : `agrihack{y0u_c4n_aPP3nd_d4t4_Aft3r_PN6_F00tEr}`<br/>
+[sumber file](doc/matryoshka.png)
+
+### 3. LatihSkillBerdusta - Round 1
+dengan menggunakan [web tools ini](https://aperisolve.fr/)
+<br/><br/>
+![](foto/round1_flag.png)
+<br/><br/>
+flag : `agrihack{Wh1tE_w@5_th3_1MP05t3r__1_1mp05tEr_remaining}`<br/>
+[sumber file](doc/round1.png)
+
+### 4. HEX MASTERACE - I
 
 
 
@@ -61,7 +77,13 @@ flag : `agrihack{oh_h3r3_15_w4LDoo__776c64}`<br/>
 
 
 
-
+### 5. Dark Joke 
+dengan menggunakan __GIMP__ dan mengatur __Brightness & Contrast__ maka ketemulah
+<br/><br/>
+![](foto/darkjoke_flag.png)
+<br/><br/>
+flag : `agrihack{RGB_1_is_d4ark_not_dark3st}`<br/>
+[sumber file](doc/darkJoke.zip)
 
 
 
