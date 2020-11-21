@@ -70,11 +70,20 @@ flag : `agrihack{Wh1tE_w@5_th3_1MP05t3r__1_1mp05tEr_remaining}`<br/>
 [sumber file](doc/round1.png)
 
 ### 4. HEX MASTERACE - I
-
-
-
-
-
+kita buka dulu fotonya ternyata tidak bisa dikarenakan peringatan yakni `not png file`.
+<br/><br/>
+![](foto/hex1_cek.png)
+<br/><br/>
+dan kemudian saya ganti headernya agar bisa dibuka yah
+<br/><br/>
+![](foto/hex1_header.png)
+<br/><br/>
+dan setelah memperbaiki, kemudian dibuka dan ketemulah flagnya
+<br/><br/>
+![](foto/hex1_flag.png)
+<br/><br/>
+flag : `agrihack{h3x_ad4lah_ko3ntji_LINZ_IS_BUCYN}`
+[file](https://drive.google.com/file/d/1gQrTh5i0lPP2yTEtvEdxXJhjXMHs_uAA/view?usp=sharing)
 
 
 ### 5. Dark Joke 
@@ -85,20 +94,146 @@ dengan menggunakan __GIMP__ dan mengatur __Brightness & Contrast__ maka ketemula
 flag : `agrihack{RGB_1_is_d4ark_not_dark3st}`<br/>
 [sumber file](doc/darkJoke.zip)
 
+### 6. VN
+analisislah dengan menggunakan file atau exiftool terlebih dahulu
+<br/><br/>
+![](foto/vn_comment.png)
+<br/><br/>
+kemudian dengan menggunakan aplikasi audacity, kita melihat spectrogrmannya
+<br/><br/>
+![](foto/vn_spectrogran.png)
+<br/><br/>
+dan akhirnya saya mendapatkan flag 
+<br/><br/>
+![](foto/vn_spectrogram.png)
+<br/><br/>
+yakni dengan menggunakan reversing maka hasilnya adalah 
+<br/><br/>
+![](foto/vn_flag.png)
+<br/><br/>
+flag : `agrihack{audio_H1dd3n_1m4g3}`
+[sumber file](doc/voiceNote.zip)
+
+
+
+### 7. Mata Ajaib
+dengan menggunakan [magic eye online](https://magiceye.ecksdee.co.uk/)
+<br/><br/>
+![](foto/mataajaib.png)
+<br/><br/>
+flagnya : `agrihack{Stereogr4m_is_n0t_M4gic`<br/>
+[sumber file](doc/mataajaib.zip)
+
+### 8. Hex Masterace II
+kita buka dahulu,ternyata ada masalah dengan chunk`IEND`
+<br/><br/>
+![](foto/hex2_IEND.png)
+<br/><br/>
+kemudian mengikuti dan memindahkan chunk file `IEND` dari depan ke belakang maka prosesnya seperti ini
+<br/><br/>
+![](foto/hex2_sebelum.png)
+<br/><br/>
+<br/><br/>
+![](foto/hex2_sesudah.png)
+<br/><br/>
+dan bukalah foto maka jawabannya adalah 
+<br/><br/>
+![](foto/hex2_flag.png)
+<br/><br/>
+flag : `agrihack{str03rtur_Sud4h_p45t1_LINZ_IS_BUCYN}`<br/>
+[file](https://drive.google.com/file/d/1AzrenlJ3bbBgEjHjnkmlDjUaxPq642od/view?usp=sharing)
+
+
+### 9. Blok ke Blok,tapi bukan cipher
+dengan menggunakan gimp dan memerge satu persatu maka hasilnya adalah
+<br/><br/>
+![](foto/blokfor_flag.png)
+<br/><br/>
+flag : `agrihack{coppingimage_with_script_n_pamer_damage}`<br/>
+[file](https://drive.google.com/drive/folders/1f9zYgKrKUOLm8TzEs2Ipitk-r5_t1Hej?usp=sharing)
+
+
+### 10. sakura SmartTV
+dengan menggunakan __QSSTV__ maka hasilnya adalah
+<br/><br/>
+![](foto/sakuratv_flag.png)
+<br/><br/>
+flag : `agrihack{SlowSc4n_T3leV1si0n}`<br/>
+[sumber file](doc/sakuraSmartTV.zip)
+
+### 11. Kabel Hiu
+dengan menggunakan __wireshark__ dan juga ingat. dianalisis ya.
+<br/><br/>
+![](foto/kabelhiu_wireshark.png)
+<br/><br/>
+dan kemudian dengan menggunakan base 64 dari password tersebut
+<br/><br/>
+![](foto/kabelhiu_flag.png)
+<br/><br/>
+flag : `agrihack{http_iz_n0t_secur3_anym0r3}`<br/>
+[sumber file](doc/kabelHiu.zip)
+
+### 12. Wo Sing Cing Tao
+dengan menggunakan mengikuti write up dari [picoctf whitepages](https://github.com/Dvd848/CTFs/blob/master/2019_picoCTF/WhitePages.md)
+<br/><br/>
+![](foto/wosing_raw.png)
+<br/><br/>
+dengan menghapus string `Wo sing cing tao ` , byte `E2` , serta mengganti `'\x8b' -> '0'` `'\x8c' -> '1'` maka hasilnya adalah
+<br/><br/>
+![](foto/wosing_byte.png)
+<br/><br/>
+dan akhirnya saya akan mengkonversikan biner ke ascii menjadi 
+<br/><br/>
+![](foto/wosing_flag.png)
+<br/><br/>
+flag : `agrihack{Un1C0D3_Z3R0_width_SPAC3}`<br/>
+[file](doc/woSingCingTao.zip)
+
+### 13. Hex Masterace - III
+pertama ganti dahulu `, --> .  pada rename`  
+<br/><br/>
+![](foto/hex3_tik.png)
+<br/><br/>
+kemuidan gantilah `GAMA -> gAMA` karena chunk png yang ada adalah gAMA bukan GAMA
+referensi `https://www.w3.org/TR/PNG-Chunks.html`
+<br/><br/>
+![](foto/hex3_gAMA.png)
+<br/><br/>
+dan ternyata ada masalah IDAA dan akhirnya saya hapus saja `IDAAT -> IDAT`
+<br/><br/>
+![](foto/hex3_IDAT.png)
+<br/><br/>
+dan kita buka saja langsung gambarnya dan ketemulah flagnya
+<br/><br/>
+![](foto/hex3_flag.png)
+<br/><br/>
+flag : `agrihack{m3tad4ta_fri3ndly_LINZ_IS_BUCYN_PAR4HhH}`<br/>
+[file](https://agrihack.codepwnda.id/uploads?key=d49fe638a2d33349c4f223d2037530efc33409faf0f1c37ad3b4787d4e600e05%2FEX_3%2Cpng)
+
+
+### 14. Vola - V1
+dengan menggunakan aplikasi __volatility__ dan mengikuti cara dari `https://petircysec.com/joints2019-memori/` maka kita pertama tama mencari profile kemudian langsung mencari __clipboard__
+<br/><br/>
+![](foto/v1.png)
+<br/><br/>
+flag : `agrihack{a_5Impl3_file_EkxTr4ct11oN__}`<br/>
+
+### 15. Vola - V2
+sama seperti vola v1 bedanya kita menggunakan __cmdscan__ maka hasilnya
+<br/><br/>
+![](foto/v2.png)
+<br/><br/>
+flag : `agrihack{l33T_h4XX0rzz__u53_Cl1_yekn0w}`
+
+### 16. KeyLogger
+dengan bantuan 
+
+### 17. Hex Masterace - IV
 
 
 
 
-
-
-
-
-
-
-
-
-
-
+### 18. Hex Masterace - V
 
 
 
