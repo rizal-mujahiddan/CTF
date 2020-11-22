@@ -259,12 +259,9 @@ analisislah dengan menggunakan file atau exiftool terlebih dahulu
 <br/><br/>
 kemudian dengan menggunakan aplikasi audacity, kita melihat spectrogrmannya
 <br/><br/>
-![](foto/vn_spectrogran.png)
+![](foto/vn_spectogram.psd)
 <br/><br/>
 dan akhirnya saya mendapatkan flag 
-<br/><br/>
-![](foto/vn_spectrogram.png)
-<br/><br/>
 yakni dengan menggunakan reversing maka hasilnya adalah 
 <br/><br/>
 ![](foto/vn_flag.png)
