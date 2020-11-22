@@ -32,7 +32,7 @@ dengan melihat dan memahami dari [overwrite return address](https://www.youtube.
 flag : `agrihack{jump_to_anywhere_with_overflow_LINZ_IS_HERE}` <br/><br/> [sumber file](https://ipb.link/flow3) <br/>netcat : `nc 52.187.65.2 17003` 
 
 ### 4. String1
-dengan menggunakan writeup dari [sini](https://tcode2k16.github.io/blog/posts/picoctf-2018-writeup/binary-exploitation/#problem-6) maka saya langsung aplikasikan di ipython3
+dengan menggunakan writeup dari `https://tcode2k16.github.io/blog/posts/picoctf-2018-writeup/binary-exploitation/#problem-6` maka saya langsung aplikasikan di ipython3
 <br/><br/>
 ![](foto/string1_script.png)
 <br/><br/>
