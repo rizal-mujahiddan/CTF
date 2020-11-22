@@ -226,7 +226,12 @@ sama seperti vola v1 bedanya kita menggunakan __cmdscan__ maka hasilnya
 flag : `agrihack{l33T_h4XX0rzz__u53_Cl1_yekn0w}`
 
 ### 16. KeyLogger
-dengan bantuan 
+dengan bantuan dari web https://github.com/TeamRocketIst/ctf-usb-keyboard-parser maka saya bisa mengerjakan kasus ini
+<br/><br/>
+![](foto/keylogger_flag.png)
+<br/><br/>
+dan ketemulah flagnya <br/>
+flag : `agrihack{USB_K3yStr0k333_Enj0yerz}`
 
 ### 17. Hex Masterace - IV
 cek dulu apakah error pas dibuka gambarnya , ternyata error pada bagian kasus __header__ yang mengatakan `DOS -> MAC`. <br/>
@@ -239,19 +244,50 @@ tetapi masih error saja pada bagian `[8C]IDA` kemudian hapus saja `[8C]` agar me
 <br/><br/>
 ![](foto/hex4_per2.png)
 <br/><br/>
-setelah diperbaiki jugapun ada error `IDAT`
-
-
-
+setelah diperbaiki jugapun ada error `IDAT : CRC ERROR` maka kita akan mencari akhiran `IDAT` dengan offset `0x1700(length) + 0x82(IDAT)`
+<br/><br/>
+![](foto/hex4_IDAT_CRC.png)
+<br/><br/>
+dan perbaikilah 
+<br/><br/>
+![](foto/hex4_edit_CRC.png)
+<br/><br/>
+setelah itu ada masalah pada bagian pencompressan
+<br/><br/>
+![](foto/hex4_edit_CRC.png)
+<br/><br/>
+kemudian saya langsung menggunakan __optipng__ dengan option __-fix__ maka ketemulah 
+flag
+<br/><br/>
+![](foto/hex4_edit_CRC.png)
+<br/><br/>
+flag : `agrihack{m3t4data_m45tery_KASIAN_AH_LINZ}`
+<br/>
 
 ### 18. Hex Masterace - V
-
-
-
-
-
-
-
+pertama saya buka zipnya ternyata tidak bisa yah, seperti biasa check dulu zipnya dengan command __zipdetails__ kemudian kita ganti dengan filename length dengan `0007` agar menyentuh chunk `UT`
+<br/><br/>
+![](foto/hex5_filenameL1.png)
+<br/><br/>
+ternyata pada bagian central header #1, ad masalah `truncated file`-> maka saya langsung
+saja ganti filename length menjadi `0007`  
+<br/><br/>
+![](foto/hex5_filenameL2.png)
+<br/><br/>
+setelah dibuka saya heran kenapa gak bisa dibuka yah, mungkin karena filenamenya kosong makanya saya ganti dengan `filflag` aja dulu
+<br/><br/>
+![](foto/hex5_filename.png)
+<br/><br/>
+kemudian bisa diekstrak filenya , tapi filenya bukan flag . makadari itu kita __binwalk__ dan __foremost__ saja 
+<br/><br/>
+![](foto/hex5_foremost.png)
+<br/><br/>
+dan kemudian lihat outputnya dan ketemulah flagnya
+<br/><br/>
+![](foto/hex5_flag.png)
+<br/><br/>
+flag : `agrihack{met4dat4_g0dly_buc1n_wnn4be3}`
+<br/>
 
 
 ## Crpytography
