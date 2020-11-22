@@ -797,7 +797,7 @@ setelah mendapatkan tablenya , tinggal kita `dump`
 dan tinggal kita masukkan saja akun admin dikarenakan sudah ada password ke websitenya
 dan ketemulah flagnya
 <br/><br/>
-[](foto/admin_flag.png)
+![](foto/admin_flag.png)
 <br/><br/>flagnya : `agrihack{ez_SeQueL_Inj3kxx1on_}`
 [sumber website](http://52.187.65.2:16009)
 
