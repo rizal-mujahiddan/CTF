@@ -88,8 +88,7 @@ awal mulanya saya mencurigai `1 7 18 9 8 1 3 11` yang dikonversikan menjadi `agr
 <br/><br/>
 ![](foto/talking.png)
 <br/><br/>
-
-
+flag : `agrihack{1t_just_alfh4b3t_r3pr3s3n74710n}`
 [sumber filenya](https://drive.google.com/drive/folders/1sO9aU4fKPLcuhQQEV5FHfdIU6D3VbqmP?usp=sharing)
 ### 5. BabyXOR
 dengan mengikuti saran dari youtube [csi ipb](https://www.youtube.com/watch?v=-elQW05sgV8) dan dikarenakan dari pembuat soal tersebut terinspirasi dari _cyber jawara_ maka kita bisa mengubah UTF-16 menjadi UTF-8 dengan hexdump dan jadikan little endian <br/> <br/> ![](foto/babyxor_hexdump.png) <br/><br/>
