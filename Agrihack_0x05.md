@@ -4,17 +4,22 @@ Agrihack merupakan Ajang untuk penyeleksian menjadi anggota CSI(Cyber Security I
 
 ## Binary 
 ### 1. Flow1
-dengan melihat urutan stacknya yang bersebelahan, <br/><br/>
-![](foto/flow1_c.png)<br/><br/>
+dengan melihat urutan stacknya yang bersebelahan,
+<br/><br/>
+![](foto/flow1_c.png)
+<br/><br/>
 kita timpa saja yah melebihi si __buffernya__ 
-<br/><br/>![](foto/flow1_nc.png)<br/><br/>
+<br/><br/>
+![](foto/flow1_nc.png)
+<br/><br/>
 flag : `agrihack{Toooooooooo_much_character_is_dangerous_LINZ_IS_HERE}
 `<br/><br/> [sumber file](https://ipb.link/flow1)<br/>netcat : `nc 52.187.65.2 17001` 
 
 ### 2. Flow2
+<br/><br/>
 ![](foto/flow2_c.png)
-<br/><br/>dengan melihat ```modified == 0x04170417``` 
-maka kita bisa memodifikasi dengan setelah ``` 64*'A' (buffer) + '\x17\x04\x17\x04'(modified)``` maka terjadilah seperti
+<br/><br/>
+dengan melihat ```modified == 0x04170417``` maka kita bisa memodifikasi dengan setelah ``` 64*'A' (buffer) + '\x17\x04\x17\x04'(modified)``` maka terjadilah seperti
 <br/><br/>
 ![](foto/flow2_nc.png)
 <br/><br/>
@@ -576,11 +581,11 @@ pertama kita decompile terlebih dahulu `pyc -> py` dengan menggunakan [uncompyle
 <br/><br/>
 dan kemudian kita analisis code agar inputannya menghasilkan flag
 <br/><br/>
-![](foto/python-c-0x00_analysis.png)
+![](foto/python-0x00_analysis.png)
 <br/><br/>
 dan langsung dapatkan lah flagnya
 <br/><br/>
-![](foto/python-c-0x00_flag.png)
+![](foto/python-0x00_flag.png)
 <br/><br/>
 flag : `agrihack{dec0mpile_pyc_bytc0de_9adj3}`<br/>
 [file](doc/py-0x00.pyc)
@@ -692,12 +697,9 @@ flag : `agrihack{u_are_an_inspector!_LINZ_IS_HERE}`
 
 ### 2. X-header
 dikarenakan sudah jelas yang dicari adalah X-header maka tinggal kita inspect -> Network dan temukan X-Header-nya 
-<br/>
-<br/>
-<br/>
+<br/><br/>
 ![](foto/X-Header.png)
-<br/>
-<br/>
+<br/><br/>
 flag : `agrihack{x-header_header_tersembunyi_LINZ_IS_HERE}`<br/>
 website : `http://52.187.65.2:16007/`
 
