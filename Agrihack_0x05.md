@@ -104,7 +104,7 @@ kemdian tinggal kita masukkan passwordnya `b33f` ke `nc 52.187.65.2 15001`
 <br/><br/>
 ![](foto/crack1_ter.png)
 <br/><br/>
-`agrihack{brut3f0rc3333_as_1t5_f1n33______b33f}`
+flag : `agrihack{brut3f0rc3333_as_1t5_f1n33______b33f}`
 ### 7. Introduction to Cipher_Series : Matrix
 dengan foto seperti <br/> <br/>
 ![](foto/matrix.jpg)
