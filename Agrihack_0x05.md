@@ -571,7 +571,7 @@ flag : `agrihack{welcome_to_reversing}`<br/>
 
 ### 4. python-0x00
 pertama kita decompile terlebih dahulu `pyc -> py` dengan menggunakan [uncompyle6](https://pypi.org/project/uncompyle6/) 
-br/><br/>
+<br/><br/>
 ![](foto/python-0x00_decompile.png)
 <br/><br/>
 dan kemudian kita analisis code agar inputannya menghasilkan flag
