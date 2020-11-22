@@ -654,7 +654,7 @@ dan ketemulah flag : `agrihack{weh_kok_ngecheat__}`
 [sumber file](doc/c-0x03)
 
 ### 8. C-0x04
-Dengan menggunakan IDA PRO dan menganalisis dari fungsi itu sendiri . maka hasilnya adalah [sebagai berikut](doc/analisis\ C-0x04.txt) 
+Dengan menggunakan IDA PRO dan menganalisis dari fungsi itu sendiri . maka hasilnya adalah [sebagai berikut](doc/analisis_C-0x04.txt) 
 <br/><br/>
 ![](foto/c-0x04_flag.png)
 <br/><br/>
@@ -669,7 +669,7 @@ kita mencoba coba terlebih dahulu [file c-0x05](doc/c-0x05) dan menjadilah seper
 <br/><br/>
 Kemudian kita lihat di IDA Pro , melihat codingannya
 <br/><br/>
-![](foto/c-0x05_coba.png)
+![](foto/c-0x05_ida.png)
 <br/><br/>
 dan kemudian kita mencoba membuat encoding dari bahasa C ke Python agar lebih mudah
 <br/><br/>
@@ -677,7 +677,7 @@ dan kemudian kita mencoba membuat encoding dari bahasa C ke Python agar lebih mu
 <br/><br/>
 dan langsunglah membuat decoding dan juga langsung men-__decoding__ dengan inputan dari [secret.smile](doc/secret.smile)
 <br/><br/>
-![](foto/c-0x05_percobaan.png)
+![](foto/c-0x05_flag.png)
 <br/><br/>
 [file smile](doc/secret.smile) <br/>
 [file c-0x05](doc/c-0x05)
