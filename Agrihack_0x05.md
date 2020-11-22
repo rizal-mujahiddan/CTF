@@ -109,7 +109,34 @@ flag : `agrihack{brut3f0rc3333_as_1t5_f1n33______b33f}`
 dengan foto seperti <br/> <br/>
 ![](foto/matrix.jpg)
  <br/> <br/>
-maka dengan menyamakan konsep dari soal sebelumnya dari Talking maka akan menjadi seperti [ini](doc/matrix.txt) <br/>
+maka dengan menyamakan konsep dari soal sebelumnya dari Talking maka akan menjadi seperti [ini](doc/matrix.txt) 
+```
+﻿a a 0 4 4 5 0
+g c l t n 1 0
+r k u _ s t N 
+i [ m T p 1 }
+h C n r 0 0
+
+Kemudian saya transpose
+
+a g r i h
+a c k [ C
+0 l u m n
+4 t _ T r
+4 n s p 0
+5 1 t 1 0
+0 0 N }
+
+	||
+	||
+	||
+	\/
+saya ganti [ --> { karena format "agrihack{.*?}"	
+
+agrihack{C0lumn4t_Tr4nsp051t1000N}
+```
+
+<br/>
 `flag : agrihack{C0lumn4t_Tr4nsp051t1000N}`
 <br/>
 [sumber_file](https://drive.google.com/drive/folders/1UskrfztjMhYbpp7c3ZEYMTfNMpHh0ori?usp=sharing)
