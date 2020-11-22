@@ -55,11 +55,10 @@ adalah <br/>
 
 ### 2. crypto/Introduction to Cipher_Series : ROMAN
 dikarenakan didalam foto tersebut ada data foto caesar.png yang ada kluenya dengan menggunakan _caesar cipher_ maka dengan [tools](http://rumkin.com/tools/cipher/caesar.php) ini dan teks `rxizyrtb{Xrzlj_Alczlj_Trvjri}` maka akan menghasilkan ```agrihack{Gaius_Julius_Caesar}``` 
+<a href="https://drive.google.com/file/d/1NwgB5Bzkb8AO0z2aSKYhHjzew92FbtH1/view">caesar.png</a>
 <br/><br/>
 ![](foto/Roman.png)
 <br/><br/>
-<a href="https://drive.google.com/file/d/1NwgB5Bzkb8AO0z2aSKYhHjzew92FbtH1/view">caesar.png</a>
-<br/>
 flag : `agrihack{Gaius_Julius_Caesar}`
 <br/>
 
