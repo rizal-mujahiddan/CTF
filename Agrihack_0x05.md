@@ -54,8 +54,14 @@ adalah <br/>
 ```agrihack{basic_to_know_base_64}```
 
 ### 2. crypto/Introduction to Cipher_Series : ROMAN
-dikarenakan didalam foto tersebut ada data foto caesar.png yang ada kluenya dengan menggunakan _caesar cipher_ maka dengan [tools](http://rumkin.com/tools/cipher/caesar.php) ini dan teks `rxizyrtb{Xrzlj_Alczlj_Trvjri}` maka akan menghasilkan ```agrihack{Gaius_Julius_Caesar}``` <br/> ![](foto/Roman.png)<br/>
+dikarenakan didalam foto tersebut ada data foto caesar.png yang ada kluenya dengan menggunakan _caesar cipher_ maka dengan [tools](http://rumkin.com/tools/cipher/caesar.php) ini dan teks `rxizyrtb{Xrzlj_Alczlj_Trvjri}` maka akan menghasilkan ```agrihack{Gaius_Julius_Caesar}``` 
+<br/><br/>
+![](foto/Roman.png)
+<br/><br/>
 <a href="https://drive.google.com/file/d/1NwgB5Bzkb8AO0z2aSKYhHjzew92FbtH1/view">caesar.png</a>
+<br/>
+flag : `agrihack{Gaius_Julius_Caesar}`
+<br/>
 
 ### 3. Introduction to Cipher_Series : GiovanBattistaBellaso
 dengan meninjau dan memahami gambar dari foto ini <br/><br/>
@@ -69,12 +75,22 @@ maka dengan [website ini](http://rumkin.com/tools/cipher/vigenere.php) maka kete
 flag : `agrihack{Vignere_Ch1p3r's_H3r3}`
 [sumber file](https://drive.google.com/drive/folders/1oYDRwOURZPEL9frLmw45Nje_o428Wuce)
 ### 4. Introduction to Cipher_Series : Talking
-lihatlah kata kunci dari hint tersebut `'numbers come after letters, underscore come after numbers'` maka anda akan terkejut dengan ini karena sangat mudah untuk dipecahkan dengan hint ini maka saya akan membuatnya di [notepad](doc/talking_cipher) awal mulanya saya mencurigai `1 7 18 9 8 1 3 11` yang dikonversikan menjadi `agrihack` , maka saya langung mengkonversikan yang lain dan dengan petunjuk hint juga ya maka akan menjadi [ini](doc/boooo.txt)
-<br/>
-<br/>
+lihatlah kata kunci dari hint tersebut `'numbers come after letters, underscore come after numbers'` maka anda akan terkejut dengan ini karena sangat mudah untuk dipecahkan dengan hint ini maka saya akan membuatnya di 
+```
+kiri -> char ; kanan ; cipher
+
+a = 1	b = 2	c = 3	d = 4	e = 5	f = 6	g = 7	h = 8	i = 9 	j =10
+k = 11	l = 12	m = 13	n = 14	o = 15	p = 16	q = 17	r = 18	s = 19	t = 20
+u = 21	v = 22	w = 23	x = 24	y = 25	z = 26	0 = 27	1 = 28	2 = 29
+3 = 30	4 = 31	5 = 32	6 = 33	7 = 34	8 = 35	9 = 36	_ = 37	{ = 38	} = 39
+```
+awal mulanya saya mencurigai `1 7 18 9 8 1 3 11` yang dikonversikan menjadi `agrihack` , maka saya langung mengkonversikan yang lain dan dengan petunjuk hint juga ya maka akan menjadi [ini](foto/talking_flag.png)
+
+<br/><br/>
 ![](foto/talking.png)
-<br/>
-<br/>
+<br/><br/>
+
+
 [sumber filenya](https://drive.google.com/drive/folders/1sO9aU4fKPLcuhQQEV5FHfdIU6D3VbqmP?usp=sharing)
 ### 5. BabyXOR
 dengan mengikuti saran dari youtube [csi ipb](https://www.youtube.com/watch?v=-elQW05sgV8) dan dikarenakan dari pembuat soal tersebut terinspirasi dari _cyber jawara_ maka kita bisa mengubah UTF-16 menjadi UTF-8 dengan hexdump dan jadikan little endian <br/> <br/> ![](foto/babyxor_hexdump.png) <br/><br/>
