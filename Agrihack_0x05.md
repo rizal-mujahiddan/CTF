@@ -654,7 +654,7 @@ dan ketemulah flag : `agrihack{weh_kok_ngecheat__}`
 [sumber file](doc/c-0x03)
 
 ### 8. C-0x04
-Dengan menggunakan IDA PRO dan menganalisis dari fungsi itu sendiri . maka hasilnya adalah [sebagai berikut](doc/analisis C-0x04.txt) 
+Dengan menggunakan IDA PRO dan menganalisis dari fungsi itu sendiri . maka hasilnya adalah [sebagai berikut](doc/analisis\ C-0x04.txt) 
 <br/><br/>
 ![](foto/c-0x04_flag.png)
 <br/><br/>
