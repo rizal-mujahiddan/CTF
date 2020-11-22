@@ -94,7 +94,7 @@ flag : `agrihack{1t_just_alfh4b3t_r3pr3s3n74710n}`
 dengan mengikuti saran dari youtube [csi ipb](https://www.youtube.com/watch?v=-elQW05sgV8) dan dikarenakan dari pembuat soal tersebut terinspirasi dari _cyber jawara_ maka kita bisa mengubah UTF-16 menjadi UTF-8 dengan hexdump dan jadikan little endian <br/> <br/> ![](foto/babyxor_hexdump.png) <br/><br/>
 dan saya olah dengan sistem babyxor di [python](doc/babyxor.py)<br/><br/>
 ![](foto/hasil_babyxor.png)<br/>
-`agrihack{you've_learn_about_xor_______let's_moving_on}`
+flag : `agrihack{you've_learn_about_xor_______let's_moving_on}`
 [sumber file](https://drive.google.com/drive/folders/18USKvC3aPP1GaG8-M5ZSF5iizZvKp_jj?usp=sharing)
 ### 6. Password Cracker
 dengan hash MD5 `0f7c017187ad3c1d50a65015de71958c` maka dengan [crack ini](https://crackstation.net/)<br/><br/>
