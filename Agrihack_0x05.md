@@ -395,27 +395,28 @@ maka dari itu saya ganti headernya menjadi `89 50 4E 47 0D 0A 1A 0A`
 <br/><br/>
 ![](foto/hex4_header.png)
 <br/><br/>
-kemudian setelah diganti,ternyata masih error invalid chunk name `[00]IHD` maka dari itu langsung saya hapus agar menjadi `IHDR`. <br/>
+kemudian setelah diganti,ternyata masih error invalid chunk name `[00]IHD` maka dari itu langsung saya hapus agar menjadi `IHDR`.
+<br/><br/>
+![](foto/hex4_per1.png)
+<br/><br/>
 tetapi masih error saja pada bagian `[8C]IDA` kemudian hapus saja `[8C]` agar menjadi `IDAT`
 <br/><br/>
 ![](foto/hex4_per2.png)
 <br/><br/>
 setelah diperbaiki jugapun ada error `IDAT : CRC ERROR` maka kita akan mencari akhiran `IDAT` dengan offset `0x1700(length) + 0x82(IDAT)`
 <br/><br/>
-![](foto/hex4_IDAT_CRC.png)
+![](foto/hex4_edit_CRC.png)
 <br/><br/>
 dan perbaikilah 
-<br/><br/>
-![](foto/hex4_edit_CRC.png)
-<br/><br/>
 setelah itu ada masalah pada bagian pencompressan
+kemudian saya langsung menggunakan __optipng__ dengan option __-fix__ 
 <br/><br/>
-![](foto/hex4_edit_CRC.png)
+![](foto/hex4_fix.png)
 <br/><br/>
-kemudian saya langsung menggunakan __optipng__ dengan option __-fix__ maka ketemulah 
+maka ketemulah 
 flag
 <br/><br/>
-![](foto/hex4_edit_CRC.png)
+![](foto/hex4_flag.png)
 <br/><br/>
 flag : `agrihack{m3t4data_m45tery_KASIAN_AH_LINZ}`
 <br/>
