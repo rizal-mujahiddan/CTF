@@ -735,7 +735,7 @@ pertama saya cek dahulu dengan `http://52.187.65.2:16002/robots.txt` dan ketemul
 <br/><br/>
 kemudian saya hasil nya seperti ini
 <br/><br/>
-![](foto/Kingman_flag.png)
+![](foto/Kingsman_flag.png)
 <br/><br/>
 [cara menganti user agent](https://winpoin.com/cara-mengganti-user-agent-di-google-chrome-tanpa-add-on/)<br/><br/>
 dapatlah flagnya yakni : `agrihack{ur_now_our_agent0x05_linz_is_here}`
