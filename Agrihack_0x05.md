@@ -258,8 +258,9 @@ analisislah dengan menggunakan file atau exiftool terlebih dahulu
 ![](foto/vn_comment.png)
 <br/><br/>
 kemudian dengan menggunakan aplikasi audacity, kita melihat spectrogrmannya
+**klik yang ditunjuk pointer di bawah ini**
 <br/><br/>
-![](foto/vn_spectogram.psd)
+![](foto/vn_spectogram.png)
 <br/><br/>
 dan akhirnya saya mendapatkan flag 
 yakni dengan menggunakan reversing maka hasilnya adalah 
@@ -272,9 +273,9 @@ flag : `agrihack{audio_H1dd3n_1m4g3}`
 
 
 ### 7. Mata Ajaib
-dengan menggunakan [magic eye online](https://magiceye.ecksdee.co.uk/)
+dengan menggunakan `https://magiceye.ecksdee.co.uk/`
 <br/><br/>
-![](foto/mataajaib.png)
+![](foto/mataajaib_flag.png)
 <br/><br/>
 flagnya : `agrihack{Stereogr4m_is_n0t_M4gic`<br/>
 [sumber file](doc/mataajaib.zip)
