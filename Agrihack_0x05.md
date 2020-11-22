@@ -277,7 +277,7 @@ dengan menggunakan `https://magiceye.ecksdee.co.uk/`
 <br/><br/>
 ![](foto/mataajaib_flag.png)
 <br/><br/>
-flagnya : `agrihack{Stereogr4m_is_n0t_M4gic`<br/>
+flagnya : `agrihack{Stereogr4m_is_n0t_M4gic}`<br/>
 [sumber file](doc/mataajaib.zip)
 
 ### 8. Hex Masterace II
