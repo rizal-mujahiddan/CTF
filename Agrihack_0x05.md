@@ -137,9 +137,11 @@ agrihack{C0lumn4t_Tr4nsp051t1000N}
 ```
 
 <br/>
-`flag : agrihack{C0lumn4t_Tr4nsp051t1000N}`
+flag : agrihack{C0lumn4t_Tr4nsp051t1000N}
 <br/>
 [sumber_file](https://drive.google.com/drive/folders/1UskrfztjMhYbpp7c3ZEYMTfNMpHh0ori?usp=sharing)
+
+
 ### 8. BabyAES : Introduction
 dikarenakan ada bacaannya enkripsi 3x maka yang pertama adalah dengan dekripsi seperti _cyber jawara seperti enc.txt di babyxor_ maka saya lakukan hexdump dan mendapatkan ciphernya<br/><br/>
 ![](foto/introAES_hexdump.png)
