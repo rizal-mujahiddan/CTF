@@ -722,7 +722,7 @@ Dengan menginspect dan melihat cookienya maka kita bisa melihat ada cookie ,
 jadinya bisa diganti cookienya dari `user = juna` menjadi `user = admin` dan ,<br/>,<br/>
 jadilah seperti ini 
 <br/><br/>
-![](foto/chef_hasil.png)
+![](foto/chef_flag.png)
 <br/><br/>
 maka jadilah flag : `agrihack{chef_cookie_cook_xdxdxd_LINZ_IS_HERE}`
 <br/><br/>
